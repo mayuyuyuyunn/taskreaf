@@ -2,7 +2,7 @@ class Admin::UsersController < ApplicationController
   before_action :require_admin
 
   def index
-    @user = User.all
+    @users = User.all
   end
 
   def show
@@ -25,6 +25,7 @@ class Admin::UsersController < ApplicationController
     else
       render :new
     end
+  end
 
   def update
     @user = User.find(params[:id])
